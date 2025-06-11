@@ -110,6 +110,7 @@ const board = document.getElementById('board');
         if (!cell.classList.contains('prefilled')) {
           cell.value = '';
           cell.classList.remove('invalid');
+          cell.classList.remove('valid');
         }
       });
       message.textContent = '';
