@@ -151,19 +151,29 @@ main{
 .cell{
     width: 40px; height: 40px;
     text-align: center;
-    font-size: 18px;
-    color: var(--text-color);
+    font-size: 18px;    
+    color: black;
     border: none;
 }
 
 .cell:focus{
     outline: 2px solid var(--border-color);
 }
+
 .prefilled{
-    background: var(--secondary-color); font-weight: bold;
+    background: var(--secondary-color);
+    font-weight: bold;
+    color: var(--text-color);
 }
+
 .invalid{
-    background: var(--error); color: var(--text-color);
+    background: var(--error);
+    color: var(--text-color);
+}
+
+.valid{
+    background: var(--success);
+    color: var(--text-color);
 }
 
 .controls{
