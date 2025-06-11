@@ -124,9 +124,11 @@ const board = document.getElementById('board');
         if (!cell.classList.contains('prefilled')) {
           if (Number(cell.value) !== solution[row][col]) {
             cell.classList.add('invalid');
+            cell.classList.remove('valid');
             correct = false;
           } else {
             cell.classList.remove('invalid');
+            cell.classList.add('valid');
           }
         }
       });
