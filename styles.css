@@ -193,8 +193,7 @@ button, select{
     min-height: calc(100vh - 100px);
     min-width: 300px;
     width: 25%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px;
     border: 2px solid var(--border-color);
 }
 
