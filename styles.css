@@ -74,34 +74,6 @@ header{
     filter: var(--invert);
 }
 
-main{
-    width: 100%;
-    min-height: 100vh;
-    height: 100%;
-    padding: 80px 0px 20px 5%; /* Adjusted for header height */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.boardContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 35%;
-    max-width: 450px;
-    min-height: calc(100vh - 100px); /* Adjusted for header height */
-    height: max-content;
-}
-
-.header{
-    padding: 0px 0px 20px;
-    display: flex;
-    gap: 10px;
-}
-
 .hamburger{
     font-size: 25px;
     cursor: pointer;
@@ -133,6 +105,35 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding: 80px 0px 20px 5%; /* Adjusted for header height */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.boardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 35%;
+    max-width: 450px;
+    min-height: calc(100vh - 100px); /* Adjusted for header height */
+    height: max-content;
+}
+
+.header{
+    padding: 0px 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #board{
@@ -262,6 +263,10 @@ footer .socialMedia{
 }
 
 @media (max-width: 800px) {
+    header {
+        padding: 0px 20px;
+    }
+
     main {
         flex-direction: column;
         justify-content: center;
