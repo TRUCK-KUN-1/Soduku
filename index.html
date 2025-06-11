@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soduku</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- logo, button: validate,reset, new game, delete history(stat), hint, dark/light, choose form(font,size), difficulty -->
+    <header>
+        <div class="logoContainer">
+            <img class="logoImg" src="images\sudoku_black.png" alt="" width="50" height="50">
+            <h1 class="logoName">Soduku</h1>
+        </div>
+        <nav>
+            <input type="checkbox" id="hamburger-inp">
+            <label for="hamburger-inp" class="hamburger">☰</label>
+            <div class="navbarButtons">
+                <button onclick="toggleTheme()">Toggle Theme</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="boardContainer">
+            <div class="header">
+                <label for="difficulty">Difficulty: </label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div id="board" tabindex="0"></div>            
+            <div id="message"></div>
+        </div>
+        <div class="controls">
+            <div id="timer">⏱️ Time: <span id="time">0</span>s</div>
+            <button onclick="newGame()">New Game</button>
+            <button onclick="checkSolution()">Check Solution</button>
+            <button onclick="resetBoard()">Reset</button>
+            <button onclick="giveHint()">Hint</button>
+            <button onclick="resetStats()">Reset Stats</button>
+        </div>
+        <div class="leaderBoard">
+            <h1>LeaderBoard</h1>            
+            <div id="stats">✅ Solved: <span id="solved">0</span> | 🏆 Best Time: <span id="best">--</span>s</div>
+        </div>
+    </main>
+        <footer>
+            <p>© 2023 Soduku Game. All rights reserved.</p>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>
